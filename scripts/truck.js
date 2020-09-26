@@ -10,7 +10,8 @@
       this.db = db;
     }
 
-    createOrder(order) {
+    createOrder(order) 
+    {
       console.log("Adding order for " + order.emailAddress);
       this.db.add(order.emailAddress, order);
     }
@@ -19,7 +20,7 @@
       console.log("Delivering order for " + customerId);
       this.db.remove(customerId);
     }
-    
+
     printOrders() {
       var customerIdArray = Object.keys(this.db.getAll());
 

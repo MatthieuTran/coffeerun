@@ -1,23 +1,30 @@
 (function (window) {
-    'use strict';
+  "use strict";
 
-    var App = window.App || {};
+  var App = window.App || {};
 
-    class DataStore {
-        constructor() {
-            this.data = {};
-        }
-        
-        add(key, val) { this.data[key] = val; }
-
-        get(key) { return this.data[key]; }
-        
-        getAll() { return this.data; }
-        
-        remove(key) { delete this.data[key]; }
+  class DataStore {
+    constructor() {
+      this.data = {};
     }
 
-    App.DataStore = DataStore;
-    window.App = App;
-    
+    add(key, val) {
+      this.data[key] = val;
+    }
+
+    get(key) {
+      return this.data[key];
+    }
+
+    getAll() {
+      return this.data;
+    }
+
+    remove(key) {
+      delete this.data[key];
+    }
+  }
+
+  App.DataStore = DataStore;
+  window.App = App;
 })(window);

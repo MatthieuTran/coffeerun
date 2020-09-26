@@ -9,12 +9,14 @@
   var modalSelector = $("#ex1");
 
   formHandler.addSubmitHandler(function (data) {
-      console.log(data)
+    console.log(data);
 
-      modalSelector.text('Thank you for your payment, ' + data.contactTitle + ' ' + data.username)
-      modalSelector.appendTo("body").modal();
+    modalSelector.text(
+      "Thank you for your payment, " + data.contactTitle + " " + data.username
+    );
+    modalSelector.appendTo("body").modal();
   });
 
   console.log(formHandler);
-  console.log(modalSelector)
+  console.log(modalSelector);
 })(window);
